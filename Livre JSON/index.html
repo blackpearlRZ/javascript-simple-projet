@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            color: hsl(0, 0%, 0%);
+    
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+
+            display: grid;
+            place-items: center;
+        }
+        .container{
+            border: rgb(63, 101, 171) 4px solid;
+            border-radius: 20px;
+            padding: 2rem 2rem ;
+            background-color: beige;
+        }
+        button{
+            background-color: rgb(86, 131, 215);
+            margin: 2rem 0rem;
+            border-radius: 12px;
+            padding: 0.2rem 0.2rem;
+            border: white solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <select  id="ld"></select>
+        <button class="primary-btn" id="aff-btn">Afficher info</button>
+        <h4>Informations sur le livre selectionnee: </h4>
+        <ul id="affichage">
+        </ul>
+        <button id="add">Ajouter Au panier</button>
+        <table >
+            <tbody>
+                <tr>
+                    <th>Total HT:  </th>
+                    <td id="afficher-prix">0 DHs</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
