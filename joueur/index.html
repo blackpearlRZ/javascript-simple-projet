@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joueur</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            color: hsl(0, 0%, 0%);
+    
+            padding: 4rem 2rem;
+            margin-top: 4rem;
+
+            display: grid;
+            place-items: center;
+        }
+        th,tr{
+            text-align: start;
+            padding: 2px 2px;
+        }
+
+        section{
+            display: flex;
+            gap: 2rem;
+            align-items: baseline;
+            border: 5px solid rgb(6, 78, 6);
+            border-radius: 12px;
+            padding: 2rem 3rem;
+            background-color: rgb(230, 229, 207);
+        }
+        button{
+            background-color: rgb(106, 153, 106);
+            padding: 3px 4px ;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <div class="side1">
+        <form id="form">
+                <h1>liste des joueuers</h1>
+                <table>
+                    <tr>
+                        <th><label for="code" >Code:</label></th>
+                        <td><input type="text" name="code" id="code" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="nom" >Nom :</label></th>
+                        <td><input type="text" name="nom" id="nom" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="prenom" >Prenom:</label></th>
+                        <td><input type="text" name="prenom" id="prenom" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="numero" >Numero:</label></th>
+                        <td><input type="text" name="numero" id="numero" required></td>
+                    </tr>
+                    <tr>
+                        <th><label for="equipe" >Equipe:</label></th>
+                        <td><input type="text" name="equipe" id="equipe" required></td>
+                    </tr>
+                </table><br>
+            </form>
+                <button id="sauvegarder">sauvegarder</button>
+                <button id="annuler">annuler</button>
+                <button id="vider">vider</button>
+            </div>
+            <div class="side2">
+                <table  border="1" id="playersTable">
+                    <thead>
+                        <tr>
+                            <th>code</th>
+                            <th>nom</th>
+                            <th>prenom</th>
+                            <th>numero</th>
+                            <th>equipe</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table><br>
+                <button id="ajouter">ajouter</button>
+                <button id="supprimer">supprimer</button><br><br>
+                <button id="showlist">afficher liste des matches</button>
+            </div>
+    </section>
+        <script src="index.js"></script>
+</body>
+</html>
