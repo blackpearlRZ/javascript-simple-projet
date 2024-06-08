@@ -92,7 +92,7 @@ btnSupprimer.addEventListener('click', function () {
 const showlist =document.getElementsById('showlist')
     const matchList = document.createElement('ul');
     document.body.appendChild(matchList);
-    // Ajout de l'événement clic au bouton
+    // Ajout de l'événem ent clic au bouton
     showlist.addEventListener('click', function() {
         // Création de l'objet XMLHttpRequest
         const xhr = new XMLHttpRequest();
