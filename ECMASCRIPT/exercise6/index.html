@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Heure: <span id="hrs">10</span></h3>
+    <h3>Minute: <span id="min">23</span></h3>
+    <h3>Seconde: <span id="sec">13</span></h3>
+    <button  onclick="incrementer()">Incrementer</button>
+    <button   onclick="decrementer()">Decrementer</button>
+    <button id="arreter"  onclick="arreter()">Arreter</button>
+    <button onclick="startTimer()">Start Timer</button>
+    <script>
+        let heure = 10;
+        let minute = 23;
+        let seconde = 10;
+        let intervall;
+        function updateDisplay(){
+            const heureh3 = document.getElementById("hrs").textContent = heure
+            const minuteh3 = document.getElementById("min").textContent = minute
+            const secondeh3 = document.getElementById("sec").textContent = seconde
+        }
+
+        function incrementer(temps){
+            seconde++
+            if(seconde == 60){
+                seconde = 0
+                minute++
+                if(minute == 60){
+                    minute = 0
+                    heure++
+                }
+            }
+            updateDisplay()
+        }
+        function decrementer(){
+            seconde--
+            if(seconde < 0){
+                seconde = 59
+                minute--
+                if(minute < 0){
+                    minute = 59
+                    heure--
+                }
+            }
+            updateDisplay()
+        }
+        function startTimer(){
+            if(!intervall){
+                intervall = setInterval(incrementer,1000)
+            }
+        }
+        startTimer()
+        function arreter(){
+            clearInterval(intervall)
+            intervall = null
+        }
+        updateDisplay()
+    </script>
+</body>
+</html>
